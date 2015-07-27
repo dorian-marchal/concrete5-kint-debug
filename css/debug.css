@@ -1,7 +1,7 @@
-body > .kint {
+.ccm-panel-ready body > .kint {
     margin-top: 50px;
 }
 
-body > .kint ~ .kint {
+.ccm-panel-ready body > .kint ~ .kint {
     margin-top: 0px !important;
 }
