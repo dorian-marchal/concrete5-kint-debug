@@ -1,0 +1,7 @@
+body > .kint {
+    margin-top: 50px;
+}
+
+body > .kint ~ .kint {
+    margin-top: 0px !important;
+}
