@@ -23,7 +23,7 @@ class Controller extends Package {
 
     public function on_start() {
         $al = \Concrete\Core\Asset\AssetList::getInstance();
-        $al->register('css', 'debug', '../packages/debug/css/debug.css');
-        View::getInstance()->requireAsset('css', 'debug');
+        $al->register('css', 'debug-css', '../packages/debug/css/debug.css');
+        View::getInstance()->requireAsset('css', 'debug-css');
     }
 }
