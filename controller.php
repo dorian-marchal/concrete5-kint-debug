@@ -4,7 +4,7 @@ namespace Concrete\Package\KintDebug;
 use Concrete\Core\Package\Package;
 use View;
 
-defined('C5_EXECUTE') or die(_("Access Denied."));
+defined('C5_EXECUTE') or die(t("Access Denied."));
 
 require_once __DIR__ . '/vendor/autoload.php';
 
