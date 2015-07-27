@@ -4,9 +4,9 @@ namespace Concrete\Package\DebugKit;
 use Concrete\Core\Package\Package;
 use View;
 
-require_once __DIR__ . '/vendor/autoload.php';
-
 defined('C5_EXECUTE') or die(_("Access Denied."));
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 class Controller extends Package {
     protected $pkgHandle = 'debug_kit';
