@@ -1,2 +1,3 @@
-# concrete5-debug-kit
-Add debugging tools to a Concrete5 website
+# Debug Kit
+
+Add [Kint](http://raveren.github.io/kint/) debugging tools to a Concrete5 website
