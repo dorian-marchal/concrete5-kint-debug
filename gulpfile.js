@@ -7,9 +7,12 @@ var zip = require('gulp-zip');
 gulp.task('release', function () {
 
     var zippedFiles = [
-        './controller.php',
-        './css/**/*',
-        './vendor/**/*',
+        'controller.php',
+        'css/**/*',
+        'vendor/**/*',
+        'LICENSE',
+        'README.md',
+        'icon.png',
     ];
 
     // get current version
