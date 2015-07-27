@@ -18,7 +18,7 @@ gulp.task('release', function () {
     // get current version
     var version = require('./package.json').version;
 
-    return gulp.src(zippedFiles, {base: '.'})
+    return gulp.src(zippedFiles, {base: '..'})
         .pipe(zip('kint-debug-v' + version + '.zip'))
         .pipe(gulp.dest('dist'));
 });
