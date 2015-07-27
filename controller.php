@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\DebugKit;
+namespace Concrete\Package\KintDebug;
 
 use Concrete\Core\Package\Package;
 use View;
@@ -9,7 +9,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 require_once __DIR__ . '/vendor/autoload.php';
 
 class Controller extends Package {
-    protected $pkgHandle = 'debug_kit';
+    protected $pkgHandle = 'kint_debug';
     protected $appVersionRequired = '5.7';
     protected $pkgVersion = '0.1.0';
 
@@ -18,7 +18,7 @@ class Controller extends Package {
     }
 
     public function getPackageName() {
-        return t('Debug Kit');
+        return t('Kint Debug');
     }
 
     public function on_start() {
