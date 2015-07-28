@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\DebugKit;
+namespace Concrete\Package\KintDebug;
 
 use Illuminate\Filesystem\Filesystem;;
 use Concrete\Core\Package\Package;
@@ -11,7 +11,7 @@ $fs = new Filesystem();
 $fs->getRequire(__DIR__ . '/vendor/autoload.php');
 
 class Controller extends Package {
-    protected $pkgHandle = 'debug_kit';
+    protected $pkgHandle = 'kint_debug';
     protected $appVersionRequired = '5.7.0.4';
     protected $pkgVersion = '0.9.2';
 
