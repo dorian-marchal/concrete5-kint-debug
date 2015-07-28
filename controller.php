@@ -1,12 +1,14 @@
 <?php
 namespace Concrete\Package\DebugKit;
 
+use Illuminate\Filesystem\Filesystem;;
 use Concrete\Core\Package\Package;
 use View;
 
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
-require_once __DIR__ . '/vendor/autoload.php';
+$fs = new Filesystem();
+$fs->getRequire(__DIR__ . '/vendor/autoload.php');
 
 class Controller extends Package {
     protected $pkgHandle = 'debug_kit';
