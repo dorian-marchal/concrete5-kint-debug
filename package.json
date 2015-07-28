@@ -1,5 +1,5 @@
 {
-  "name": "concrete5-kint-debug",
+  "name": "concrete5-debug-kit",
   "version": "0.9.1",
   "description": "Add Kint debugging tools to a Concrete5 website",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dorian-marchal/concrete5-kint-debug.git"
+    "url": "git+https://github.com/dorian-marchal/concrete5-debug-kit.git"
   },
   "keywords": [
     "concrete5",
@@ -18,9 +18,9 @@
   "author": "Dorian Marchal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dorian-marchal/concrete5-kint-debug/issues"
+    "url": "https://github.com/dorian-marchal/concrete5-debug-kit/issues"
   },
-  "homepage": "https://github.com/dorian-marchal/concrete5-kint-debug#readme",
+  "homepage": "https://github.com/dorian-marchal/concrete5-debug-kit#readme",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-zip": "^3.0.2"

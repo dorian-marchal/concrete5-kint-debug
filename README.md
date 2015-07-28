@@ -1,7 +1,8 @@
-# Kint Debug
+# Debug Kit
 
 Add [Kint](http://raveren.github.io/kint/) debugging tools to a Concrete5 website.
 > Kint is a tool designed to present your debugging data in the absolutely best way possible.
+
 
 ### Usage
 
@@ -15,4 +16,4 @@ __Output :__
 
 ---
 
-See [Kint Documentation](http://raveren.github.io/kint/#intro) for more informations.
+__Note :__ I am not the developer of Kint, see [Kint documentation](http://raveren.github.io/kint/#intro) for more informations.

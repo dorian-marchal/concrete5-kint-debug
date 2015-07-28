@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\KintDebug;
+namespace Concrete\Package\DebugKit;
 
 use Concrete\Core\Package\Package;
 use View;
@@ -9,7 +9,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 require_once __DIR__ . '/vendor/autoload.php';
 
 class Controller extends Package {
-    protected $pkgHandle = 'kint_debug';
+    protected $pkgHandle = 'debug_kit';
     protected $appVersionRequired = '5.7.0.4';
     protected $pkgVersion = '0.9.1';
 
@@ -18,16 +18,16 @@ class Controller extends Package {
     }
 
     public function getPackageName() {
-        return t('Kint Debug');
+        return t('Debug Kit');
     }
 
     public function on_start() {
         $al = \Concrete\Core\Asset\AssetList::getInstance();
-        $al->register('css', 'kint_debug/css', 'css/debug.css', array(), $this->pkgHandle);
+        $al->register('css', $this->pkgHandle . '/css', 'css/debug.css', array(), $this->pkgHandle);
 
         // Never include the css in ajax responses
         if(!$this->isAjaxRequest()) {
-            View::getInstance()->requireAsset('css', 'kint_debug/css');
+            View::getInstance()->requireAsset('css', $this->pkgHandle . '/css');
         }
     }
 
