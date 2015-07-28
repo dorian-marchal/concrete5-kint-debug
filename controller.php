@@ -13,7 +13,7 @@ $fs->getRequire(__DIR__ . '/vendor/autoload.php');
 class Controller extends Package {
     protected $pkgHandle = 'debug_kit';
     protected $appVersionRequired = '5.7.0.4';
-    protected $pkgVersion = '0.9.1';
+    protected $pkgVersion = '0.9.2';
 
     public function getPackageDescription() {
         return t('Add Kint debugging tools');

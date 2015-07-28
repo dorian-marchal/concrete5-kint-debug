@@ -1,6 +1,6 @@
 {
   "name": "concrete5-debug-kit",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Add Kint debugging tools to a Concrete5 website",
   "main": "gulpfile.js",
   "scripts": {
