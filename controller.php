@@ -5,7 +5,7 @@ use Illuminate\Filesystem\Filesystem;;
 use Concrete\Core\Package\Package;
 use View;
 
-defined('C5_EXECUTE') or die(_("Access Denied."));
+defined('C5_EXECUTE') or die(_('Access Denied.'));
 
 $fs = new Filesystem();
 $fs->getRequire(__DIR__ . '/vendor/autoload.php');
