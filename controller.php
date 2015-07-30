@@ -4,6 +4,7 @@ namespace Concrete\Package\KintDebug;
 use Illuminate\Filesystem\Filesystem;;
 use Concrete\Core\Package\Package;
 use View;
+use Config;
 
 defined('C5_EXECUTE') or die(_('Access Denied.'));
 
@@ -27,9 +28,17 @@ class Controller extends Package {
         $al = \Concrete\Core\Asset\AssetList::getInstance();
         $al->register('css', $this->pkgHandle . '/css', 'css/debug.css', array(), $this->pkgHandle);
 
-        // Never include the css in ajax responses
-        if(!$this->isAjaxRequest()) {
-            View::getInstance()->requireAsset('css', $this->pkgHandle . '/css');
+        $displayErrors = Config::get('concrete.debug.display_errors');
+
+        // Only enable Kint if display_errors is true
+        if (!$displayErrors) {
+            \Kint::enabled(false);
+        }
+        else {
+            // Never include the css in ajax responses
+            if(!$this->isAjaxRequest()) {
+                View::getInstance()->requireAsset('css', $this->pkgHandle . '/css');
+            }
         }
     }
 
@@ -37,8 +46,7 @@ class Controller extends Package {
      * Check, if possible, that this execution was triggered by an AJAX request.
      * @return bool
      */
-    protected function isAjaxRequest()
-    {
+    protected function isAjaxRequest() {
         return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
             strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
     }
