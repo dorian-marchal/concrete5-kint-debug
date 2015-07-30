@@ -10,7 +10,6 @@ gulp.task('release', function () {
         'controller.php',
         'css/**/*',
         'vendor/**/*',
-        'LICENSE',
         'README.md',
         'icon.png',
     ];

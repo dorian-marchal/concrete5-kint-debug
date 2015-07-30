@@ -5,7 +5,7 @@ use Illuminate\Filesystem\Filesystem;;
 use Concrete\Core\Package\Package;
 use View;
 
-defined('C5_EXECUTE') or die(_("Access Denied."));
+defined('C5_EXECUTE') or die(_('Access Denied.'));
 
 $fs = new Filesystem();
 $fs->getRequire(__DIR__ . '/vendor/autoload.php');
@@ -13,7 +13,7 @@ $fs->getRequire(__DIR__ . '/vendor/autoload.php');
 class Controller extends Package {
     protected $pkgHandle = 'kint_debug';
     protected $appVersionRequired = '5.7.0.4';
-    protected $pkgVersion = '0.9.2';
+    protected $pkgVersion = '0.9.3';
 
     public function getPackageDescription() {
         return t('Add Kint debugging tools');
