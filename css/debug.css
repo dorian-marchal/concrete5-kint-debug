@@ -5,3 +5,12 @@
 .ccm-panel-ready body > .kint ~ .kint {
     margin-top: 0px !important;
 }
+
+.kint footer {
+    background-color: white;
+    font-size: 11px;
+}
+
+.kint footer li {
+    color: #444;
+}
