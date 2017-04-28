@@ -8,23 +8,30 @@ use Config;
 
 defined('C5_EXECUTE') or die(_('Access Denied.'));
 
-$fs = new Filesystem();
-$fs->getRequire(__DIR__ . '/vendor/autoload.php');
+//$fs = new Filesystem();
+//$fs->getRequire(__DIR__ . '/vendor/autoload.php');
 
-class Controller extends Package {
+class Controller extends Package
+{
     protected $pkgHandle = 'kint_debug';
     protected $appVersionRequired = '5.7.0.4';
-    protected $pkgVersion = '0.9.5';
+    protected $pkgVersion = '0.9.6';
 
-    public function getPackageDescription() {
+    public function getPackageDescription()
+    {
         return t('Add Kint debugging tools');
     }
 
-    public function getPackageName() {
+    public function getPackageName()
+    {
         return t('Debug Kit');
     }
 
-    public function on_start() {
+    public function on_start()
+    {
+        // register autoloading
+        $this->registerAutoload();
+
         $al = \Concrete\Core\Asset\AssetList::getInstance();
         $al->register('css', $this->pkgHandle . '/css', 'css/debug.css', array(), $this->pkgHandle);
 
@@ -49,5 +56,13 @@ class Controller extends Package {
     protected function isAjaxRequest() {
         return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
             strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+    }
+
+    /**
+     * Register autoloader.
+     */
+    protected function registerAutoload()
+    {
+        require $this->getPackagePath().'/vendor/autoload.php';
     }
 }
